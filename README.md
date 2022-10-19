@@ -8,7 +8,7 @@ This is a basic Blog website that allows users to create, edit, comment and dele
 
 ## Built With
 
-- Languages: _**Ruby**_
+- Languages: _**Ruby**_ _**Postgresql**_
 - Frameworks: _**Ruby On Rails**_
 - Technologies used: _**Visual Studio Code**_
 
