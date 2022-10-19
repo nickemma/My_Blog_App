@@ -1,6 +1,6 @@
 # Project Name
 
-My_Blog_App
+My Blog App
 
 # Description the project.
 
