@@ -2,13 +2,13 @@ require 'rails_helper'
 require 'ffi'
 
 RSpec.describe User, type: :model do
-   subject do
+  subject do
     User.new(
       name: 'Doe', photo: 'https://doe.com/me.png',
       bio: 'Iam John Doe.', post_counter: 0
     )
   end
-  
+
   before { subject.save } # save the user before each test
 
   context 'Return valid data' do
@@ -22,8 +22,8 @@ RSpec.describe User, type: :model do
       expect(subject).to be_valid
     end
   end
-  
-   context 'Return invalid data' do
+
+  context 'Return invalid data' do
     it 'should not accept blank name' do
       subject.name = nil
       expect(subject).to_not be_valid
