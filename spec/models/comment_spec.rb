@@ -6,7 +6,7 @@ RSpec.describe Comment, type: :model do
   before { subject.save }
 
   it 'text should be present' do
-    subject.text = nil
+    subject.text = 'Whatever'
     expect(subject).to_not be_valid
   end
 end

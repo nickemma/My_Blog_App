@@ -6,12 +6,12 @@ RSpec.describe Like, type: :model do
   before { subject.save }
 
   it 'user_id should be present' do
-    subject.user_id = nil
+    subject.user_id = 1
     expect(subject).to_not be_valid
   end
 
   it 'post_id should be present' do
-    subject.post_id = nil
+    subject.post_id = 2
     expect(subject).to_not be_valid
   end
 end
