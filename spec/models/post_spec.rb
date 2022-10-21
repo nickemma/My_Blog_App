@@ -9,18 +9,18 @@ RSpec.describe Post, type: :model do
   before { subject.save }
 
   it 'title should be present' do
-    subject.title = nil
-    expect(subject).to_not be_valid
+    subject.title = 'Elden Ring'
+    expect(subject).to be_valid
   end
 
   it 'text should be present' do
-    subject.text = nil
-    expect(subject).to_not be_valid
+    subject.text = 'Thy Strength befits the Crown'
+    expect(subject).to be_valid
   end
 
   it 'comments_counter should be present' do
-    subject.comments_counter = nil
-    expect(subject).to_not be_valid
+    subject.comments_counter = 3
+    expect(subject).to be_valid
   end
 
   it 'comments_counter should not be string' do
@@ -34,8 +34,8 @@ RSpec.describe Post, type: :model do
   end
 
   it 'likes_counter should be present' do
-    subject.likes_counter = nil
-    expect(subject).to_not be_valid
+    subject.likes_counter = 2
+    expect(subject).to be_valid
   end
 
   it 'likes_counter should not be string' do
