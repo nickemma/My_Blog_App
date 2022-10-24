@@ -8,6 +8,6 @@ class User < ApplicationRecord
 
   # Compare this snippet from app\models\post.rb:
   def recent_three_posts
-    posts.last(3)
+    posts.order(created_at: :desc).limit(3)
   end
 end
