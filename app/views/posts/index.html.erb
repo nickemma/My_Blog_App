@@ -6,13 +6,12 @@
     <%= render 'partials/post', post: post %></ul>
     <ul class="comments-list">
       <% if post.comments_counter > 0 %>
-            <%= render 'partials/comment', comments: post.recent_five_comments %>
+        <%= render 'partials/comment', comments: post.recent_five_comments %>
       <% else %>
         <li>No comments</li>
       <% end %>
       <ul>
    <a>
     <% end %>
-
   <button type='button'>Pagination</button>
 </section>
