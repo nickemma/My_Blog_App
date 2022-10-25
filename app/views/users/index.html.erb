@@ -1,1 +1,8 @@
-<h1> Here is a list of users</h1>
+<h1> List all users </h1> 
+<ul class='list'>
+<% @users.each do |user| %>
+ <a href='/users/<%= user.id %>'>
+    <%= render 'partials/user', user: user %>
+ <a>
+<% end %>
+</ul>

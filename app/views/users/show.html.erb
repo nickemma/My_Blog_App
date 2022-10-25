@@ -1,1 +1,15 @@
-<h1> Here is information about a given user</h1>
+<div class="user">
+<%= render 'partials/user', user: @user %>
+<div class='bio'>
+<p><%= @user.bio %></p>
+</div>
+<ul class='card'>
+    <% @user.recent_three_posts.each do |post| %>
+      <a href="/users/<%= @user.id %>/posts/<%= post.id %> ">
+        <%= render 'partials/post', post: post %>
+      </a>
+    <% end %>
+</ul>
+ <button> See all Posts </button>
+</div>
+
