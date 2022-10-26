@@ -1,10 +1,14 @@
 <li>
  <h3> <% post.title%> </h3>
  <p> <%= truncate(post.text, :length => 150) %> </p>
- <%# <p> <%= post.text.first(150) %> </p> %>
  <strong>
   <p class="placeholder stats">
    Comments: <%= post.comments_counter %>,
    Likes: <%= post.likes_counter %> </p>
  </strong>
+ <ul>
+  <% post.comments.each do |comment| %>
+   <li> <%= comment.text %> </li>
+  <% end %>
+ </ul>
 </li>
