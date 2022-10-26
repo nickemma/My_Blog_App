@@ -1,11 +1,10 @@
 <section >
   <%= render'partials/user', user: @user %>
     <% @posts.each do |post| %>
-   <a href="/users/<%= @user.id %>/posts/<%= post.id %>">
     <ul class="post-list">
     <%= render 'partials/post', post: post %></ul>
-    </a>
     </ul>
     <% end %>
   <button>Pagination</button>
+
 </section>

@@ -1,0 +1,14 @@
+h1>Add Comment</h1>
+<%= form_with model: @post, url: user_posts_path, method: :post, local: true, scope: :post, class: "form" do |form| %>
+  <div class="mb-3">
+    <%= f.label :post_title %>
+    <%= f.text_field :title, class: "form" %>
+  </div>
+  <div class="mb-3">
+    <%= f.label :your_post %>
+    <%= f.text_area :text, class: "form-text" %>
+  </div>
+  <div class="mb-3">
+       <%= f.submit "Add Post" %>
+  </div>
+<% end %>

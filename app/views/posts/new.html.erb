@@ -1,0 +1,14 @@
+<h1>Create Post</h1>
+<%= form_with model: @post, url: user_posts_path, method: :post, local: true, scope: :new_post do |form| %>
+  <div class="mb-3">
+    <%= form.label :Subject %>
+    <%= form.text_field :title, class: "form-control" %>
+  </div>
+  <div class="mb-3">
+    <%= form.label :Comment %>
+    <%= form.text_area :text, class: "form-control text" %>
+  </div>
+  <div class="mb-3">
+    <%= form.submit class: "btn btn-primary" %>
+  </div>
+<% end %>
