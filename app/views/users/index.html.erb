@@ -1,8 +1,7 @@
 <h1> List all users </h1> 
 <ul class='list'>
 <% @users.each do |user| %>
- <a href='/users/<%= user.id %>'>
-    <%= render 'partials/user', user: user %>
- <a>
+   <%= render 'partials/user', user: user %>
+<%= link_to 'users', user_path(user.id)%>
 <% end %>
 </ul>
