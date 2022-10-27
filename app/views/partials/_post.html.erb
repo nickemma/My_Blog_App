@@ -7,7 +7,7 @@
    Likes: <%= post.likes_counter %> </p>
  </strong>
  <ul>
-  <% post.comments.each do |comment| %>
+  <% post.recent_five_comments.each do |comment| %>
    <li> <%= comment.text %> </li>
   <% end %>
  </ul>
