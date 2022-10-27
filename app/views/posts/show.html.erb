@@ -9,5 +9,8 @@
     <% @post.comments.each do |comment| %>
       <p> <%= comment.user.name%>: <%= comment.text%><p>
     <% end %>  
+    <%= form_with url: "/users/#{@post.user_id}/posts/#{@post.id}/likes" do |f| %>
+  <%= f.submit "Like" %>
+  <% end %>
   </div>
 </div>
