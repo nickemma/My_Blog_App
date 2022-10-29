@@ -1,8 +1,10 @@
 <div class="user">
 <%= render 'partials/user', user: @user %>
 <div class='bio'>
+<p>bio </p>
 <p><%= @user.bio %></p>
 </div>
+<%= link_to 'Create Post', new_user_post_path(@user) %>
 <ul class='card'>
     <% @user.recent_three_posts.each_with_index do |post, index| %>
     <p>Post #<%= index+1 %></p>
