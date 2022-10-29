@@ -4,7 +4,8 @@
 <p><%= @user.bio %></p>
 </div>
 <ul class='card'>
-    <% @user.recent_three_posts.each do |post| %>
+    <% @user.recent_three_posts.each_with_index do |post, index| %>
+    <p>Post #<%= index+1 %></p>
         <%= render 'partials/post', post: post %>
     <% end %>
 </ul>

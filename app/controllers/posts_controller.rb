@@ -12,7 +12,6 @@ class PostsController < ApplicationController
   def new
     @user = User.find(params[:user_id])
     @post = @user.posts.new
-    render :new, locals: { post: @post }
   end
 
   def create
@@ -27,7 +26,7 @@ class PostsController < ApplicationController
           redirect_to user_posts_path(@user)
         else
           flash[:error] = 'Post not created'
-          render :new, locals: { post: @post }
+          render :new
         end
       end
     end
