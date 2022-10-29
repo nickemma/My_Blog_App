@@ -10,5 +10,6 @@
   <% post.recent_five_comments.each do |comment| %>
    <li> <%= comment.text %> </li>
   <% end %>
+   <a href="/users/<%= @user.id %>/posts/<%= post.id %>"> See more</a>
  </ul>
 </li>

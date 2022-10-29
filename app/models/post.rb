@@ -1,7 +1,7 @@
 class Post < ApplicationRecord
   belongs_to :user
-  has_many :comments
-  has_many :likes
+  has_many :comments, dependent: :destroy, foreign_key: :post_id
+  has_many :likes, dependent: :destroy, foreign_key: :post_id
 
   after_save :update_posts_counter
 

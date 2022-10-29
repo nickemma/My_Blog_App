@@ -43,8 +43,6 @@ gem 'bootsnap', require: false
 
 gem 'ffi', github: 'ffi/ffi', submodules: true
 
-gem 'foreman'
-
 # Use Sass to process CSS
 # gem "sassc-rails"
 
@@ -76,5 +74,3 @@ group :test do
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
-
-gem 'tailwindcss-rails', '~> 2.0'
