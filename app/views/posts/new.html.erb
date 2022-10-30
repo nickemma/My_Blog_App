@@ -1,14 +1,16 @@
-<h1>Create Post</h1>
+<section class='added'>
+<h3>Create Post</h3>
 <%= form_with model: @post, url: user_posts_path, method: :post, scope: :new_post do |form| %>
-  <div class="mb-3">
+  <div class="label">
     <%= form.label :Subject %>
     <%= form.text_field :title, class: "form-control" %>
   </div>
-  <div class="mb-3">
+  <div class="add">
     <%= form.label :Comment %>
     <%= form.text_area :text, class: "form-control text" %>
   </div>
-    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+    <div class='submit'>
     <%= form.submit %>
-  </button>
+    </div>
 <% end %>
+</section>

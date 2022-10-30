@@ -219,12 +219,12 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-top: 5rem;
+  margin-top: 3rem;
 }
 
 .added h3 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
 }
 
 .add input {
@@ -234,5 +234,50 @@ body {
   background: #fff;
   cursor: pointer;
   font-size: 1rem;
+  margin: 10px;
+}
+
+.form textarea {
+  border-radius: 0.5rem;
+  padding: 13px;
+  margin-top: 15px;
+  width: 100%;
+  height: 15rem;
+  resize: none;
+}
+
+form {
+  width: 100%;
+  padding: 1.2rem 1.4rem;
+  font-size: 1.6rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+form .form-control {
+  padding: 13px;
+  border: 1px solid #d0d9d4;
+  border-radius: 4px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+form .text {
+  border-radius: 0.5rem;
+  width: 100%;
+  height: 12rem;
+  resize: none;
+}
+
+form .submit input {
+  padding: 0.5rem 1rem;
+  border-radius: 5rem;
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 20%);
+  background: #fff;
+  cursor: pointer;
+  font-size: 1.3rem;
   margin: 10px;
 }
