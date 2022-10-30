@@ -1,10 +1,10 @@
-<div class="user">
+<section class="list">
 <%= render 'partials/user', user: @user %>
 <div class='bio'>
-<p>bio </p>
+<h3>Bio </h3>
 <p><%= @user.bio %></p>
+<button class='btn'><%= link_to 'Create Post', new_user_post_path(@user)%></button>
 </div>
-<%= link_to 'Create Post', new_user_post_path(@user) %>
 <ul class='card'>
     <% @user.recent_three_posts.each_with_index do |post, index| %>
     <p>Post #<%= index+1 %></p>
@@ -13,5 +13,5 @@
 </ul>
 
   <%= link_to "See all posts", user_posts_path(@user.id)%>
-</div>
+</section>
 

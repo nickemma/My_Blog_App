@@ -1,15 +1,82 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  background: #f5f5f5;
+  overflow-x: hidden;
+}
+
+.list {
+  padding: 2rem 9%;
+}
+
+.user-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.user-card .image-container {
+  width: 10rem;
+  height: 10rem;
+}
+
+.user-card .image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.user-info {
+  width: 55rem;
+  box-shadow: 0.5rem 0.5rem 1rem rgb(0 0 0 / 20%);
+}
+.user-info h3 {
+  margin-top: 3.5rem;
+  padding: 10px;
+}
+
+.user-info p {
+  text-align: end;
+  margin-right: 1rem;
+}
+
+.bio {
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+  box-shadow: 0.5rem 0.5rem 1rem rgb(0 0 0 / 20%);
+  padding: 1rem 0;
+}
+
+.bio h3 {
+  margin-bottom: 1rem;
+}
+
+.bio p {
+  line-height: 1.5;
+  padding: 0 10px;
+}
+
+.bio .btn a {
+  display: inline-block;
+  margin-top: 1rem;
+  border-radius: 5rem;
+  padding: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 20%);
+  color: coral;
+  cursor: pointer;
+  font-size: 1.1rem;
+  background: #fff;
+}
