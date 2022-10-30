@@ -1,12 +1,12 @@
-<section >
+<section class='list'>
   <%= render'partials/user', user: @user %>
-<%= link_to 'back', users_path %>
+<button class="back"><%= link_to 'back', users_path %></button>
    <% @posts.each do |post| %>
     <ul class="post-list">
-    <%= render 'partials/post', post: post %></ul>
+    <%= render 'partials/post', post: post %>
     </ul>
     <% end %>
-  <ul class='red'>
+  <div class='pagy'>
  <%== pagy_nav(@pagy) %>
-    </ul>
+    </div>
 </section>

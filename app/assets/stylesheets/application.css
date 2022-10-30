@@ -111,3 +111,128 @@ body {
   margin-right: 1rem;
   padding-bottom: 1rem;
 }
+
+.post-list li {
+  box-shadow: 0.5rem 0.5rem 1rem rgb(0 0 0 / 20%);
+  margin-bottom: 1rem;
+  width: 50rem;
+  margin-left: 3rem;
+}
+
+.post-list li h3 {
+  padding: 15px;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+.post-list li h4 {
+  padding: 5px;
+}
+
+.back a {
+  display: inline-block;
+  margin: 1rem 0;
+  border-radius: 5rem;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 20%);
+  color: coral;
+  cursor: pointer;
+  font-size: 1.1rem;
+  background: #fff;
+}
+
+.pagy {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.pagy-nav .page {
+  display: none;
+}
+
+.page.prev,
+.page.next {
+  display: inline-block;
+  margin: 1rem 0;
+  border-radius: 5rem;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 20%);
+  color: coral;
+  cursor: pointer;
+  font-size: 1.1rem;
+  background: #fff;
+}
+
+.card-info {
+  box-shadow: 0.5rem 0.5rem 1rem rgb(0 0 0 / 20%);
+  margin-bottom: 1rem;
+  width: 50rem;
+  margin-left: 3rem;
+}
+
+.card-info p {
+  padding: 15px;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+}
+
+.card-info h4 {
+  padding: 15px;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+.span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  margin-bottom: 1rem;
+}
+
+.posts {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.action button {
+  padding: 0.5rem 1rem;
+  border-radius: 5rem;
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 20%);
+  background: #fff;
+  cursor: pointer;
+  font-size: 1.7rem;
+  margin: 10px;
+}
+
+.added {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 5rem;
+}
+
+.added h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.add input {
+  padding: 0.5rem 1rem;
+  border-radius: 5rem;
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 20%);
+  background: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  margin: 10px;
+}

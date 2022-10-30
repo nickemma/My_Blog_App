@@ -6,9 +6,8 @@
    Comments: <%= post.comments_counter %>,
    Likes: <%= post.likes_counter %> </h4>
  </strong>
- <ul>
   <% post.recent_five_comments.each do |comment| %>
     <h4> <%= comment.user.name%>: <%= comment.text%><p>
   <% end %>
- </ul>
 </li>
+
