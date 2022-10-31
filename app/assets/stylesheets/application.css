@@ -43,6 +43,7 @@ body {
   width: 55rem;
   box-shadow: 0.5rem 0.5rem 1rem rgb(0 0 0 / 20%);
 }
+
 .user-info h3 {
   margin-top: 3.5rem;
   padding: 10px;
@@ -100,6 +101,11 @@ body {
   margin-left: 3rem;
 }
 
+.added h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
 .card li h3 {
   padding: 15px;
   font-size: 1.5rem;
@@ -123,9 +129,6 @@ body {
   padding: 15px;
   font-size: 1.5rem;
   text-transform: capitalize;
-}
-.post-list li h4 {
-  padding: 5px;
 }
 
 .back a {
@@ -181,6 +184,10 @@ body {
   text-transform: capitalize;
 }
 
+.post-list li h4 {
+  padding: 5px;
+}
+
 .span {
   display: flex;
   align-items: center;
@@ -220,11 +227,6 @@ body {
   justify-content: center;
   flex-direction: column;
   margin-top: 3rem;
-}
-
-.added h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
 }
 
 .add input {
