@@ -24,4 +24,10 @@ RSpec.describe 'Users Index Page', type: :feature do
     visit '/'
     expect(page).to have_content(@user.posts_counter)
   end
+
+  scenario 'renders the user show page' do
+    visit '/'
+    click_link(@user.name)
+    expect(page).to have_content(@user.name)
+  end
 end
