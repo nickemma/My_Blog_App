@@ -3,9 +3,9 @@ require 'rails_helper'
 RSpec.describe 'Users Index Page', type: :feature do
   before :each do
     @user = User.create(name: 'Oyinlade Ojesanmi', photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
-                        bio: 'I am a Full-stack developer. currently enrolled at Microverse.', posts_counter: 6)
+                        bio: 'I am a Full-stack developer', posts_counter: 6)
     @user2 = User.create(name: 'Nicholas Emmanuel', photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
-                         bio: 'I am a software developer. Optimistic, keen and a tech enthusiast, Student at Microverse.', posts_counter: 9)
+                         bio: 'I am a software developer', posts_counter: 9)
   end
   scenario 'displays all users username' do
     visit '/'

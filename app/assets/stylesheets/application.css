@@ -107,7 +107,6 @@ body {
 
 .card li {
   box-shadow: 0.5rem 0.5rem 1rem rgb(0 0 0 / 5%);
-
   margin-bottom: 1rem;
   width: 50rem;
   margin-left: 3rem;
@@ -136,7 +135,6 @@ body {
 
 .post-list li {
   box-shadow: 0.5rem 0.5rem 1rem rgb(0 0 0 / 5%);
-
   margin-bottom: 1rem;
   width: 50rem;
   margin-left: 3rem;

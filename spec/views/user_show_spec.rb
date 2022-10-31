@@ -3,12 +3,12 @@ require 'rails_helper'
 RSpec.describe 'renders users Show Page', type: :feature do
   before(:each) do
     @user = User.create(name: 'Nicholas Emmanuel', photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
-                        bio: 'I am a software developer. Optimistic, keen and a tech enthusiast, Student at Microverse.', posts_counter: 9)
+                        bio: 'I am a software developerst', posts_counter: 9)
 
-        Post.create(user: @user , title: "ahmed", text: "anything on unit tests");
-        Post.create(user: @user , title: "hamma", text: "anything on unit tests");
-        Post.create(user: @user , title: "asim", text: "anything on unit tests");
-        @post = Post.create(user: @user , title: "doe", text: "anything on unit not tests");
+    Post.create(user: @user, title: 'ahmed', text: 'anything on unit tests')
+    Post.create(user: @user, title: 'hamma', text: 'anything on unit tests')
+    Post.create(user: @user, title: 'asim', text: 'anything on unit tests')
+    @post = Post.create(user: @user, title: 'doe', text: 'anything on unit not tests')
 
     visit user_path(id: @user.id)
   end
@@ -44,5 +44,4 @@ RSpec.describe 'renders users Show Page', type: :feature do
     expect(page).to have_content(@user.recent_three_posts[2])
     expect(page).to have_no_content(Post.where(user: @user))
   end
-
 end

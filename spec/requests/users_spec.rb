@@ -13,7 +13,6 @@ RSpec.describe 'Users', type: :request do
     it 'should respond with a correct template' do
       expect(response).to render_template(:index)
     end
-
   end
 
   it 'renders a page for specific user' do
@@ -24,6 +23,5 @@ RSpec.describe 'Users', type: :request do
     expect(response).to have_http_status(:ok)
 
     expect(response).to render_template(:show)
-
   end
 end

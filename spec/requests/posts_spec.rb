@@ -12,7 +12,6 @@ RSpec.describe 'Posts', type: :request do
     expect(response).to have_http_status(:ok)
 
     expect(response).to render_template(:index)
-
   end
 
   it 'renders a page for specific post' do
@@ -23,6 +22,5 @@ RSpec.describe 'Posts', type: :request do
     expect(response).to have_http_status(:ok)
 
     expect(response).to render_template(:show)
-
   end
 end
