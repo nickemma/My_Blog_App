@@ -5,7 +5,17 @@ RSpec.describe 'renders users Show Page', type: :feature do
  
   end
 
-sts')
+  it 'should display user name and bio' do
+    expect(page).to have_content(@user.name)
+    expect(page).to have_content(@user.bio)
+  end
+
+  it 'should render user profile photo' do
+    find("img[src='https://unsplash.com/photos/F_-0BxGuVvo']")
+  end
+
+  it 'should displays static text' do
+    expect(page).to have_content('Posts')
   end
 
   it 'Shows the User name' do
