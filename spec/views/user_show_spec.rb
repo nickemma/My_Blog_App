@@ -2,7 +2,15 @@ require 'rails_helper'
 
 RSpec.describe 'renders users Show Page', type: :feature do
   before(:each) do
- 
+    @user = User.create(name: 'Nicholas Emmanuel', photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
+                        bio: 'I am a software developerst', posts_counter: 9)
+
+    Post.create(user: @user, title: 'ahmed', text: 'anything on unit tests')
+    Post.create(user: @user, title: 'hamma', text: 'anything on unit tests')
+    Post.create(user: @user, title: 'asim', text: 'anything on unit tests')
+    @post = Post.create(user: @user, title: 'doe', text: 'anything on unit not tests')
+
+    visit user_path(id: @user.id)
   end
 
   it 'should display user name and bio' do
