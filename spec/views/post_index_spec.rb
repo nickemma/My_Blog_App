@@ -35,10 +35,4 @@ RSpec.describe 'Render posts index page', type: :feature do
   scenario 'display the how many Likes' do
     expect(page).to have_content('Likes: 0')
   end
-
-  # scenario 'should paginate on the post index page' do
-  #   visit user_posts_path(@user)
-  #   click_link(@pagy, match: :first)
-  #   expect(page).to have_path(user_posts_path(@user, (@posts?page=1))
-  # end
 end
