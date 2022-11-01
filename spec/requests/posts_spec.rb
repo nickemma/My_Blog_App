@@ -12,8 +12,6 @@ RSpec.describe 'Posts', type: :request do
     expect(response).to have_http_status(:ok)
 
     expect(response).to render_template(:index)
-
-    expect(response.body).to include('Here is a list of posts for a given user')
   end
 
   it 'renders a page for specific post' do
@@ -24,7 +22,5 @@ RSpec.describe 'Posts', type: :request do
     expect(response).to have_http_status(:ok)
 
     expect(response).to render_template(:show)
-
-    expect(response.body).to include(' Post content for a given user')
   end
 end

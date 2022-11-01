@@ -1,7 +1,5 @@
-<h1> List all users </h1> 
-<ul class='list'>
+<section class='list'>
 <% @users.each do |user| %>
    <%= render 'partials/user', user: user %>
-<%= link_to 'users', user_path(user.id)%>
 <% end %>
-</ul>
+</section>

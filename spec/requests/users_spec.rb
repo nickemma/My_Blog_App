@@ -13,10 +13,6 @@ RSpec.describe 'Users', type: :request do
     it 'should respond with a correct template' do
       expect(response).to render_template(:index)
     end
-
-    it 'body should have correct  placeholder text' do
-      expect(response.body).to include('Here is a list of users')
-    end
   end
 
   it 'renders a page for specific user' do
@@ -27,7 +23,5 @@ RSpec.describe 'Users', type: :request do
     expect(response).to have_http_status(:ok)
 
     expect(response).to render_template(:show)
-
-    expect(response.body).to include('Here is information about a given user')
   end
 end

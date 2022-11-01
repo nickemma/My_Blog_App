@@ -1,18 +1,17 @@
 class PostsController < ApplicationController
   def index
     @user = User.find(params[:user_id])
-    @posts = @user.posts
+    @pagy, @posts = pagy(@user.posts.order(created_at: :desc), items: 3)
   end
 
   def show
     @user = User.find(params[:user_id])
-    @post = @user.posts.find(params[:id])
+    @post = Post.find(params[:id])
   end
 
   def new
     @user = User.find(params[:user_id])
     @post = @user.posts.new
-    render :new, locals: { post: @post }
   end
 
   def create
@@ -27,7 +26,7 @@ class PostsController < ApplicationController
           redirect_to user_posts_path(@user)
         else
           flash[:error] = 'Post not created'
-          render :new, locals: { post: @post }
+          render :new
         end
       end
     end

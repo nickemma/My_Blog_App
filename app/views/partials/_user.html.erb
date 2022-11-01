@@ -1,6 +1,8 @@
 <div class='user-card'>
    <div class="image-container">
-    <img src=<%= user.photo %> alt="Profile picture of <%= user.name%>" />
+   <%= link_to user_path(user.id) do %>
+   <img src=<%= user.photo %> alt="Profile picture of <%= user.name%>" />
+   <% end %>
   </div>
   <div class="user-info">
     <h3><%= user.name %></h3>
