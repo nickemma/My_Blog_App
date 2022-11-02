@@ -90,6 +90,18 @@ For you to see the styling being applied in the browser during development
 - Twitter: [@techieEmma](https://twitter.com/techieEmma)
 - LinkedIn: [@Nicholas Emmanuel](https://www.linkedin.com/in/techieemma/)
 
+👤 **Shaqayq Darwazi**
+
+- GitHub: [@shaqayq](https://github.com/shaqayq)
+- Twitter: [@Darwazi-shaqayq](https://twitter.com/darwazi-shaqayq)
+- LinkedIn: [shaqayq-darwazi](https://linkedin.com/in/shaqayq-darwazi)
+
+👤 **Chrispaix Kaze**
+
+- GitHub: [@Chrispaix Kaze](https://github.com/ChrispaixK)
+- Twitter: [@Chrispaix Kaze](https://twitter.com/ChrispaixK)
+- LinkedIn: [Chrispaix Kaze](https://www.linkedin.com/in/chrispaix-kaze-70445a175/)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
