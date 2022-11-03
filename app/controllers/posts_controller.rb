@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  load_and_authorize_resource
   def index
     @user = User.find(params[:user_id])
     @pagy, @posts = pagy(@user.posts.order(created_at: :desc), items: 3)
