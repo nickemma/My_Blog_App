@@ -7,7 +7,14 @@
     </div>
     <h4> <%= @post.text%> </h4>
   </div>
- 
+
+  <% if can? :destroy, @post %>
+       <%= button_to 'Delete Post',
+             user_post_path,
+             method: :delete,
+             data: {confirm: 'Are You Sure You Want to Delete This Post'}%>
+     <% end %>
+
   <ul class='action'>
     <%= form_with url: "/users/#{@post.user_id}/posts/#{@post.id}/likes" do |f| %>
     <button type="submit">

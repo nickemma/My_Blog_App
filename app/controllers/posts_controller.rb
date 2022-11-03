@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  load_and_authorize_resource
   def index
     @user = User.find(params[:user_id])
     @pagy, @posts = pagy(@user.posts.order(created_at: :desc), items: 3)
@@ -32,9 +33,19 @@ class PostsController < ApplicationController
     end
   end
 
+  def destroy
+    post = Post.find(params[:id])
+    user = User.find(post.user_id)
+    user.posts_counter -= 1
+    post.destroy
+    user.save
+    flash[:success] = 'You have deleted this post!'
+    redirect_to user_posts_path(user)
+  end
+
   private
 
   def post_params
-    params.require(:new_post).permit(:title, :text)
+    params.require(:new_post).permit(:title, :text, :likes_counter, :comments_counter)
   end
 end
