@@ -2,9 +2,12 @@ Rails.application.routes.draw do
   devise_for :users, sign_out_via: [:get, :post]
 
   namespace :api, defaults: { format: :json } do
-    resources :posts, only: [:index, :show] do
-      resources :comments, only: [:index, :create]
+    post 'auth/login', to: 'authentication#login'
+    resources :users, only: %i[create update destroy] do
+      resources :posts, only: [:index, :show] do
+        resources :comments, only: [:index, :create]
     end
+   end
   end
   resources :users, only: [:index, :show] do
     resources :posts, only: [:index, :show, :create, :new, :destroy] do

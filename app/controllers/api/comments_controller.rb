@@ -1,25 +1,45 @@
 class Api::CommentsController < ApplicationController
-  load_and_authorize_resource
+  before_action :authorize_request
 
   def index
-    @comments = Comment.where({ post_id: params[:post_id] }).order('created_at')
-    render json: { success: true, data: { comments: @comments } }
+    @user = User.find(params[:user_id])
+    @post = @user.posts.find(params[:post_id])
+    json_response(@post.comments)
   end
 
   def create
     @post = Post.find(params[:post_id])
-    @comment = @post.comments.new(text: comment_params[:text], user: current_user)
-
-    if @comment.save
-      render json: { success: true, data: { comment: @comment } }, status: :created
-    else
-      render json: { success: false, errors: @comment.errors }, status: :bad_request
-    end
+    comment = Comment.new(comment_params)
+    comment.post = @post
+    comment.user = @current_user
+    comment.save!
+    json_response(comment, :created)
   end
-
-  private
 
   def comment_params
-    params.require(:comment).permit(:text)
+    params.permit(:text)
   end
+  # load_and_authorize_resource
+
+  # def index
+  #   @comments = Comment.where({ post_id: params[:post_id] }).order('created_at')
+  #   render json: { success: true, data: { comments: @comments } }
+  # end
+
+  # def create
+  #   @post = Post.find(params[:post_id])
+  #   @comment = @post.comments.new(text: comment_params[:text], user: current_user)
+
+  #   if @comment.save
+  #     render json: { success: true, data: { comment: @comment } }, status: :created
+  #   else
+  #     render json: { success: false, errors: @comment.errors }, status: :bad_request
+  #   end
+  # end
+
+  # private
+
+  # def comment_params
+  #   params.require(:comment).permit(:text)
+  # end
 end
