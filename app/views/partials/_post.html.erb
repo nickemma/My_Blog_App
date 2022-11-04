@@ -8,6 +8,9 @@
  </strong>
   <% post.recent_five_comments.each do |comment| %>
     <h4> <%= comment.user.name%>: <%= comment.text%><p>
+     <% if can? :destroy, comment %>
+      <%= link_to "Delete Comment", user_post_comment_path(post.user, post, comment), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
+    <% end %>
   <% end %>
 </li>
 

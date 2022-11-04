@@ -11,8 +11,7 @@
   <% if can? :destroy, @post %>
        <%= button_to 'Delete Post',
              user_post_path,
-             method: :delete,
-             data: {confirm: 'Are You Sure You Want to Delete This Post'}%>
+             data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
      <% end %>
 
   <ul class='action'>
