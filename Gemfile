@@ -39,6 +39,8 @@ gem 'devise'
 
 gem 'jwt'
 
+gem 'rswag'
+
 gem 'cancancan'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data'
@@ -58,6 +60,7 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'rspec-rails', '>= 3.9.0'
+  gem 'rswag-specs'
 end
 
 gem 'rails-controller-testing'
