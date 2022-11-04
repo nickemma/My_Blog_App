@@ -1,10 +1,9 @@
 class Api::PostsController < ApplicationController
-  before_action :authorize_request
+  load_and_authorize_resource
 
   def index
-    @user = User.find(params[:user_id])
-    @posts = @user.posts.order(created_at: :desc).includes(:comments)
-
-    json_response(@posts)
+    @posts = Post.all.order('created_at')
+    render json: { success: true, data: { posts: @posts } }
   end
 end
+ 
