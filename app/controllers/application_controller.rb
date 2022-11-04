@@ -1,8 +1,25 @@
 class ApplicationController < ActionController::Base
   include Pagy::Backend
-  protect_from_forgery with: :exception
-  before_action :authenticate_user!
+  include Response
+  include ExceptionHandler
+
+  protect_from_forgery with: :exception, unless: -> { request.format.json? }
   before_action :configure_permitted_parameters, if: :devise_controller?
+
+  def authorize_request
+    header = request.headers['Authorization']
+    header = header.split.last if header
+    begin
+      @decoded = JsonWebToken.decode(header)
+      @user_id = params[:user_id]
+    rescue ActiveRecord::RecordNotFound => e
+      render json: { errors: e.message }, status: :unauthorized
+    rescue JWT::DecodeError => e
+      render json: { errors: "JWT_ error: #{e.message}" }, status: :unauthorized
+    else
+      render json: { errors: 'Missing token' }, status: :unauthorized unless @decoded
+    end
+  end
 
   protected
 
