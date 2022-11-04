@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception, unless: -> { request.format.json? }
   before_action :configure_permitted_parameters, if: :devise_controller?
 
-   def authorize_request
+  def authorize_request
     header = request.headers['Authorization']
     header = header.split.last if header
     begin
@@ -16,11 +16,11 @@ class ApplicationController < ActionController::Base
       render json: { errors: e.message }, status: :unauthorized
     rescue JWT::DecodeError => e
       render json: { errors: "JWT_ error: #{e.message}" }, status: :unauthorized
-    else 
+    else
       render json: { errors: 'Missing token' }, status: :unauthorized unless @decoded
     end
   end
-  
+
   protected
 
   def configure_permitted_parameters
