@@ -6,4 +6,3 @@ class Api::PostsController < ApplicationController
     render json: { success: true, data: { posts: @posts } }
   end
 end
- 
